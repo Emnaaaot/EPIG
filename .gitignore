@@ -1,0 +1,11 @@
+# Colab / Jupyter
+.ipynb_checkpoints/
+*.pyc
+__pycache__/
+
+# Large generated files (optional)
+# results/*/*.png
+
+# OS files
+.DS_Store
+Thumbs.db
