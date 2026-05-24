@@ -2,36 +2,51 @@
 
 Official repository for the paper **"EPIG: Emotion-Based Prompting for Personalised Image Generation"**.
 
-## Repository Structure
+## 📋 Overview
 
-- `notebooks/` → Google Colab notebooks (`.ipynb`)
-- `data/` → Required datasets (VAD lexicon + LLM expansions)
-- `results/` → Generated images (zipped by strategy)
-- `figures/` → Figures used in the paper
-- `paper/` → LaTeX source and PDF
+EPIG is a lightweight, training-free method that improves emotional control in text-to-image diffusion models by enriching prompts using psychological valence-arousal dimensions and role-aware decomposition (subject / stimulus / context).
 
-## How to Use
+## 📁 Repository Structure
+EPIG/
+├── notebooks/                  # Google Colab notebooks
+│   ├── EPIG_Preprocessing.ipynb
+│   ├── llm_expanded_prompts.ipynb
+│   └── EvalEPIG_final.ipynb
+│
+├── data/                       # Required datasets
+│   ├── NRC_VAD_with_subject_centric.csv
+│   └── llm_expanded_prompts.csv
+│
+├── results/                    # Generated images
+│   ├── standard.zip
+│   ├── naive.zip
+│   ├── llm_proxy.zip
+│   └── epig.zip
+│
+├── figures/                    # Paper figures
+│   ├── qualitative_grid_4x4.png
+│   ├── failure_cases.png
+│   └── epig-arch.png
+│
+├── paper/                     
+│   └── EPIG_Paper.pdf
+│
+├── README.md
+└── .gitignore
+text## 🚀 How to Reproduce
 
-1. Open any notebook in Google Colab
-2. Upload the files from `data/` when prompted
+1. Open any notebook in [Google Colab](https://colab.research.google.com)
+2. Upload the two CSV files from the `data/` folder when prompted
 3. Run the cells
 
-## Code Availability
+## 📄 Quick Links
 
-Full code, data, and results are available in this repository.
+- **Full Paper**: [EPIG_Paper.pdf](paper/EPIG_Paper.pdf)
+- **Main Evaluation Notebook**: [EvalEPIG_final.ipynb](notebooks/EvalEPIG_final.ipynb)
+- **LLM Prompt Expansion**: [llm_expanded_prompts.ipynb](notebooks/llm_expanded_prompts.ipynb)
 
-**Paper**: [EPIG_Paper.pdf](paper/EPIG_Paper.pdf)
+## 👥 Authors
 
-## Authors
-- Emna Othmen
-- Mohamed Yassine Landolsi  
+- **Emna Othmen** — amna.othman@isitc.u-sousse.tn
+- Mohamed Yassine Landolsi
 - Lotfi Ben Romdhane
-
-## Citation
-
-```bibtex
-@article{othmen2026epig,
-  title={EPIG: Emotion-Based Prompting for Personalised Image Generation},
-  author={Othmen, Emna and Landolsi, Mohamed Yassine and Ben Romdhane, Lotfi},
-  year={2026}
-}
